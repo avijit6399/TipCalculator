@@ -1,0 +1,135 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" 
+        android:overScrollMode="always" 
+        android:isScrollContainer="true" 
+        android:scrollbarAlwaysDrawVerticalTrack="true" 
+        android:scrollbarStyle="outsideInset" 
+        android:scrollbars="vertical">
+        
+<TableLayout
+    android:id="@+id/TableLayoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        
+	<TableRow
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:padding="5dip" >
+
+	    <TextView
+	        android:id="@+id/textView1"
+	        android:text="Price :" />
+
+	    <EditText
+	        android:id="@+id/txtPrice"
+	        android:ems="10"
+	        android:inputType="numberDecimal"
+	        android:width="100dp" >
+
+	        <requestFocus />
+	    </EditText>
+	</TableRow>
+   
+	<TableRow
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:padding="5dip" >
+
+	    <TextView
+	        android:id="@+id/textView2"
+	        android:text="Tip Percent :" />
+
+	    <Spinner android:id="@+id/spinnerPercent" />
+	    
+	    <EditText
+	        android:id="@+id/txtPercent"
+	        android:ems="10"
+	        android:inputType="numberDecimal"
+	        android:visibility="gone"
+	        android:width="100dp" />
+	    
+	    <Button android:id="@+id/btnSpinner" 
+	        android:onClick="onClickBtnSpinner"
+	        android:text="Custom" />
+	</TableRow>
+	<TableRow
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:gravity="left|center_vertical"
+	    android:padding="5dip" >
+
+	    <TextView
+	        android:id="@+id/textViewSplit"
+	        android:text="People Count :" />
+
+	    <Spinner android:id="@+id/spinnerPerson" />
+	</TableRow>
+
+	<TableRow 
+	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dip">
+
+		<Button
+		    android:id="@+id/buttonTip"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:onClick="clickButton"
+		    android:text="Result" />
+
+	</TableRow>
+
+    <TableRow 
+	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip">
+        <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tip :" />
+
+    	<TextView
+        android:id="@+id/txtPercentOuput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"/>
+    </TableRow>
+    
+    <TableRow 
+	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip">
+	    
+	    <TextView
+        android:id="@+id/textView4"
+        android:text="Total :" />
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+	</TableRow>
+	
+    <TableRow 
+	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip">
+	    
+	    <TextView
+        android:id="@+id/txtSplitedAmountLabel"
+        android:text="Per person cost :  " />
+
+    <TextView
+        android:id="@+id/txtSplittedAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+	</TableRow>
+
+</TableLayout>
+</ScrollView>
